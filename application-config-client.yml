@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+  application:
+    name: consumers
+server:
+  port: 3355
+---
+spring:
+     profiles: test
+     application:
+       name: consumersTest
+server:
+  port: 3377

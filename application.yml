@@ -1,8 +1,6 @@
 spring:
   profiles:
     active: dev
-server:
-  port: 8084
 eureka:
   client:
     register-with-eureka: true
@@ -15,8 +13,12 @@ spring:
   profiles: dev
   application:
     name: consumers
+server:
+  port: 8084
 ---
 spring:
      profiles: test
      application:
        name: consumersTest
+server:
+  port: 8074
