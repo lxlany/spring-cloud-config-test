@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: dev
+server:
+  port: 8084
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka8761.com:8761/eureka,http://eureka8762.com:8762/eureka
+
+---
+spring:
+  profiles: dev
+  application:
+    name: consumers
+---
+spring:
+     profiles: test
+     application:
+       name: consumersTest
